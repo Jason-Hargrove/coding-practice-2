@@ -4,8 +4,19 @@ let log = console.log;
 // Return a string in reverse
 // ex. reverseString('hello') === 'olleh'
 
-function reverseString(str) {
-    return 'Let\'s Start'
+// Soulution 1: Splitting str into an array
+// Split turns the string into an array, and it takes in a paramater of a seperator.
+// const reverseString = (str) => {
+//     const strArr = str.split('')
+//     // Reverse the array
+//     strArr.reverse();
+//     // Turn it back into an array with join() You you'll need to add '' in the parameter to get rid of the ","
+//     return strArr.join('');
+//   }
+
+  //Solution 1: Cleand up:
+  const reverseString = (str) => {
+    return strArr = str.split('').reverse().join('');
   }
   
   
