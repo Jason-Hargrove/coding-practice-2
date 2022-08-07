@@ -22,12 +22,17 @@
 // "+"" means one or more, of what ever was before.
 // let sp = str.split(/,+/); ---> [ 'Jason', '1976', 'Web Develper' ]
 
+// 6. Commas with spaces.
+// let str = "Jason ,,,,,1976, Web Develper";
+// 6. Regex grouping with space added to the group.
+// let sp = str.split(/\s*,+\s*/); ---> [ 'Jason', '1976', 'Web Develper' ]
 
-// console.log(sp);
+// 6. Second paramater of split(). The number of strings you get inside the resulting array.
+let str = "Jason,, 1976, Web Develper";
+// 6. The second paramater is the maximum number of retruned strings.
+// let sp = str.split(/\s*,+\s*/, 2); ---> [ 'Jason', '1976' ]
+// 6. Getting rid of the "+".
+// let sp = str.split(/\s*,\s*/, 3); --> [ 'Jason', '', '1976' ]
+let sp = str.split(/\s*,\s*/, 3);
 
-let myName = "Jason";
-const reverseName = (str) => {
-    return str.split('').reverse().join('');
-}
-
-console.log(reverseName(myName));
+console.log(sp);
