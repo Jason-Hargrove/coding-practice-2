@@ -16,11 +16,18 @@
 
 
 // 5. 5 commas. 
-let str = "Jason,,,,,1976,Web Develper";
+// let str = "Jason,,,,,1976,Web Develper";
 // 5. Use regex to split at every grouping of commas.
 // Finding one or more commas in a sequence.
 // "+"" means one or more, of what ever was before.
 // let sp = str.split(/,+/); ---> [ 'Jason', '1976', 'Web Develper' ]
 
 
-console.log(sp);
+// console.log(sp);
+
+let myName = "Jason";
+const reverseName = (str) => {
+    return str.split('').reverse().join('');
+}
+
+console.log(reverseName(myName));
