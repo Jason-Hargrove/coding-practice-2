@@ -6,7 +6,7 @@ let log = console.log;
 
 // Soulution 1: Splitting str into an array
 // Split turns the string into an array, and it takes in a paramater of a seperator.
-// const reverseString = (str) => {
+const reverseString = (str) => {
 //     const strArr = str.split('')
 //     // Reverse the array
 //     strArr.reverse();
@@ -15,11 +15,18 @@ let log = console.log;
 //   }
 
   //Solution 1: Cleand up:
-  const reverseString = (str) => {
-    return strArr = str.split('').reverse().join('');
+  // const reverseString = (str) => {
+  //   return strArr = str.split('').reverse().join('');
+  
+  ////////////////////////////////
+  // With a decromenting for loop
+  let revString = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    revString += str[i];
+    // or revString = revString + str[i];
   }
-  
-  
+  return revString;
+}
   
   // CHALLENGE 2: VALIDATE A PALINDROME
   // Return true if palindrome and false if not
