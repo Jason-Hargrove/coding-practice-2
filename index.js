@@ -20,9 +20,18 @@ const reverseString = (str) => {
   
   ////////////////////////////////
   // With a decromenting for loop
+  // let revString = "";
+  // for (let i = str.length - 1; i >= 0; i--) {
+  //   revString += str[i];
+  //   // or revString = revString + str[i];
+  // }
+  // return revString;
+
+  ////////////////////////////////
+  // With a incrementing for loop
   let revString = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    revString += str[i];
+  for (let i = 0; i <= str.length - 1; i++) {
+    revString = str[i] + revString;
     // or revString = revString + str[i];
   }
   return revString;
